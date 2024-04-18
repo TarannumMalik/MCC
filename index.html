@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="96" height="25" viewBox="0 0 96 25" fill="none">
+                <g clip-path="url(#clip0_83_2643)">
+                    <path
+                        d="M34.93 10.1335C33.7647 11.153 32.7408 12.3239 31.6503 13.4335L31.3382 13.7447V13.3393C31.3382 12.066 31.3673 10.7967 31.3257 9.5275C31.3049 8.89698 31.2216 8.25417 31.0385 7.65639C30.3601 5.37994 27.792 4.28266 25.1658 5.17932C22.631 6.04323 21.2326 7.90205 20.8496 10.4446C20.6041 12.111 20.5125 13.8143 20.4834 15.5011C20.4293 18.6415 20.4667 21.7859 20.4667 24.9836H15.93V17.9536C15.8967 15.1408 15.8759 12.4181 15.8177 9.69537C15.801 9.0976 15.7095 8.48754 15.5513 7.91024C14.877 5.40451 12.2965 4.21715 9.60781 5.19979C6.58612 6.30526 5.28755 8.67998 5.16685 11.6525C4.99204 15.7918 5.02117 19.9353 4.96707 24.0788C4.96707 24.3736 4.96707 24.6683 4.96707 25H0.447021V1.10137H4.94209V3.40648C7.20211 1.24467 9.741 0.294782 12.6586 0.524065C15.6012 0.757442 17.8821 2.09219 19.293 4.78627C19.8299 4.20896 20.2919 3.65623 20.8122 3.16491C24.0711 0.0900657 29.0823 -0.413537 32.4536 1.99803C34.4056 3.39419 35.3005 5.37994 35.7874 7.64002C36.0205 8.71273 35.75 9.41286 34.9259 10.1335H34.93Z"
+                        fill="white" />
+                    <path
+                        d="M41.8807 5.99411C43.9077 3.9019 45.9887 1.97347 48.8522 1.19555C54.1631 -0.249749 59.0494 0.376684 63.2198 4.20898C63.6194 4.57747 63.9399 5.03194 64.2645 5.47413C64.5475 5.86309 64.7848 6.28481 65.0844 6.75565C63.8608 7.50492 62.6788 8.22961 61.4509 8.98297C61.247 8.73731 61.068 8.54078 60.9099 8.32788C57.73 4.01655 50.6336 3.69719 47.1874 7.09958C43.608 10.6371 39.9745 14.1214 36.3909 17.6548C36.1745 17.8677 36.1037 18.3017 36.0996 18.6333C36.0746 20.7173 36.0871 22.8054 36.0871 24.9632H31.413C31.413 22.875 31.5421 20.7542 31.3756 18.6579C31.2299 16.8359 31.8168 15.5708 33.1778 14.3384C36.1412 11.6607 38.9506 8.8151 41.8724 5.99411H41.8807Z"
+                        fill="white" />
+                    <path
+                        d="M95.447 5.59285L94.7228 6.18653L94.6853 6.21929L93.266 7.38208L92.3337 8.15181C92.109 7.95938 91.8925 7.81198 91.7177 7.62364C88.9707 4.6921 85.6119 3.61939 81.6413 4.41369C79.8849 4.7658 78.5197 5.7771 77.2919 6.98493C72.6137 11.5706 67.873 16.103 63.3031 20.791C58.7497 25.4545 51.3953 25.8516 46.7961 23.6652C45.9512 23.264 45.1854 22.7072 44.4154 22.1258L44.2656 22.0152C44.1574 21.9333 44.0492 21.8474 43.9368 21.7655C43.9243 21.7532 43.9076 21.7409 43.891 21.7286C43.7328 21.6058 43.583 21.4789 43.4415 21.3519C43.1959 21.1431 42.9753 20.9343 42.7797 20.7419C42.3718 20.3406 42.0722 20.0049 41.939 19.8452C41.889 19.7879 41.8599 19.7552 41.8599 19.7552C41.0441 18.7234 40.4531 17.5565 40.0619 16.2791C39.9869 16.0293 40.0827 15.6117 40.2575 15.4233C41.4478 14.1623 42.6798 12.9381 44.0242 11.5829C44.1324 12.5532 44.1407 13.323 44.3114 14.0558C45.2728 18.1543 48.7107 20.6313 53.1767 20.6191C55.6198 20.6109 57.6468 19.7715 59.3699 18.0929C64.1521 13.4294 68.976 8.80281 73.7333 4.11889C75.6603 2.22322 77.8621 0.88437 80.5633 0.249748L80.5883 0.24156C80.5883 0.24156 80.634 0.229277 80.659 0.225182C80.6882 0.216994 80.7173 0.212899 80.7381 0.208805H80.7423C80.992 0.171956 81.5955 0.0859751 82.4362 0.0368431H82.4487C83.148 -0.00819455 84.0178 -0.0204776 84.9834 0.0368431C86.0614 0.0982581 87.2643 0.257937 88.4963 0.573201C88.875 0.66737 89.2621 0.777917 89.645 0.913031C89.799 0.962163 89.953 1.01539 90.1028 1.07271C90.1112 1.07271 90.1153 1.0768 90.1195 1.0809C90.2194 1.11365 90.3151 1.1546 90.4108 1.19554C90.5274 1.24058 90.6439 1.28561 90.7604 1.33884C90.9061 1.40026 91.0518 1.46577 91.1975 1.53537L91.2224 1.54765C91.2224 1.54765 91.2432 1.55994 91.2516 1.56403C93.0371 2.45659 94.3732 3.86095 95.447 5.59285Z"
+                        fill="white" />
+                    <path
+                        d="M95.447 18.8012C93.5033 21.9866 90.6897 23.8249 87.102 24.5906C86.3861 24.7421 85.6453 24.8117 84.8295 24.9222C80.3552 25.1433 76.4886 23.9969 73.4336 20.7337C72.235 19.4522 71.3193 17.9987 70.824 16.3159C70.7533 16.0744 70.7616 15.6854 70.9072 15.5298C72.1351 14.2278 73.4045 12.9627 74.828 11.5174C74.9195 16.0088 76.8008 19.0755 81.0253 20.2342C85.3747 21.4257 89.0082 20.1073 91.7844 16.4306C93.008 17.2249 94.1984 17.9987 95.447 18.8053V18.8012Z"
+                        fill="#3399FF" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_83_2643">
+                        <rect width="95" height="25" fill="white" transform="translate(0.447021)" />
+                    </clipPath>
+                </defs>
+            </svg>
+            <h1>MUMBAI CODING CLUB</h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">CURRICULUM</a></li>
+                <li><a href="#">COURSES</a></li>
+                <li><a href="#">REVIEW</a></li>
+                <li><a href="#">fAQ</a></li>
+            </ul>
+        </div>
+        <div class="button">
+            <a href="#">CONTACT US </a>
+        </div>
+    </header>
+    <section>
+        <div class="home">
+            <div class="content">
+                <h2>Chasing Jobs?</h2>
+                <h2>Let the <span>Jobs </span>chase you.</h2>
+                <h2 style="margin-right: -100px;">First Ever Class Room <span>T</span><span id="element"></span></h2>
+                <span id="element"></span>
+                <div class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="295px" height="100px" viewBox="0 0 95 26"
+                        fill="none">
+                        <g clip-path="url(#clip0_83_2643)">
+                            <path
+                                d="M34.483 10.5106C33.3176 11.5301 32.2938 12.701 31.2033 13.8106L30.8911 14.1218V13.7164C30.8911 12.4431 30.9203 11.1739 30.8786 9.90461C30.8578 9.27408 30.7746 8.63127 30.5915 8.0335C29.913 5.75705 27.345 4.65977 24.7187 5.55643C22.184 6.42033 20.7855 8.27916 20.4026 10.8217C20.1571 12.4881 20.0655 14.1914 20.0364 15.8782C19.9823 19.0186 20.0197 22.163 20.0197 25.3607H15.483V18.3307C15.4497 15.5179 15.4289 12.7952 15.3706 10.0725C15.354 9.4747 15.2624 8.86465 15.1043 8.28735C14.43 5.78162 11.8495 4.59426 9.16079 5.5769C6.1391 6.68237 4.84053 9.05708 4.71982 12.0296C4.54502 16.1689 4.57415 20.3124 4.52004 24.4559C4.52004 24.7507 4.52004 25.0455 4.52004 25.3771H0V1.47847H4.49507V3.78358C6.75509 1.62177 9.29398 0.671888 12.2116 0.901171C15.1542 1.13455 17.435 2.4693 18.846 5.16337C19.3829 4.58607 19.8449 4.03334 20.3652 3.54202C23.6241 0.467171 28.6353 -0.0364314 32.0066 2.37513C33.9586 3.7713 34.8534 5.75705 35.3404 8.01712C35.5735 9.08984 35.303 9.78997 34.4789 10.5106H34.483Z"
+                                fill="white" />
+                            <path
+                                d="M41.4336 6.37109C43.4605 4.27889 45.5416 2.35046 48.4051 1.57253C53.7159 0.127234 58.6023 0.753667 62.7727 4.58596C63.1722 4.95445 63.4927 5.40892 63.8174 5.85111C64.1004 6.24007 64.3376 6.66179 64.6373 7.13264C63.4136 7.8819 62.2316 8.6066 61.0038 9.35996C60.7998 9.1143 60.6209 8.91777 60.4627 8.70486C57.2829 4.39353 50.1865 4.07417 46.7403 7.47656C43.1608 11.0141 39.5273 14.4983 35.9438 18.0318C35.7273 18.2447 35.6566 18.6787 35.6524 19.0103C35.6274 21.0943 35.6399 23.1824 35.6399 25.3401H30.9659C30.9659 23.252 31.0949 21.1312 30.9284 19.0349C30.7828 17.2129 31.3696 15.9477 32.7306 14.7153C35.694 12.0377 38.5035 9.19209 41.4252 6.37109H41.4336Z"
+                                fill="white" />
+                            <path
+                                d="M95.0002 5.9699L94.276 6.56358L94.2385 6.59633L92.8192 7.75912L91.8869 8.52886C91.6622 8.33642 91.4458 8.18903 91.2709 8.00069C88.524 5.06915 85.1651 3.99643 81.1945 4.79073C79.4381 5.14284 78.0729 6.15414 76.8451 7.36197C72.1669 11.9476 67.4263 16.4801 62.8563 21.1681C58.3029 25.8315 50.9485 26.2287 46.3494 24.0423C45.5045 23.641 44.7386 23.0842 43.9686 22.5028L43.8188 22.3923C43.7106 22.3104 43.6024 22.2244 43.49 22.1425C43.4775 22.1302 43.4609 22.118 43.4442 22.1057C43.2861 21.9828 43.1362 21.8559 42.9947 21.729C42.7492 21.5202 42.5286 21.3114 42.3329 21.1189C41.9251 20.7177 41.6254 20.382 41.4922 20.2223C41.4423 20.165 41.4131 20.1322 41.4131 20.1322C40.5973 19.1004 40.0063 17.9335 39.6151 16.6561C39.5402 16.4064 39.6359 15.9887 39.8107 15.8004C41.0011 14.5393 42.2331 13.3151 43.5774 11.9599C43.6856 12.9303 43.6939 13.7 43.8646 14.4329C44.826 18.5313 48.2639 21.0084 52.7299 20.9961C55.173 20.9879 57.2 20.1486 58.9231 18.4699C63.7053 13.8065 68.5292 9.17986 73.2865 4.49594C75.2136 2.60026 77.4153 1.26141 80.1165 0.626793L80.1415 0.618604C80.1415 0.618604 80.1873 0.606321 80.2122 0.602227C80.2414 0.594038 80.2705 0.589944 80.2913 0.58585H80.2955C80.5452 0.549001 81.1487 0.46302 81.9895 0.413888H82.0019C82.7012 0.36885 83.5711 0.356567 84.5367 0.413888C85.6147 0.475303 86.8175 0.634982 88.0495 0.950245C88.4282 1.04442 88.8153 1.15496 89.1982 1.29008C89.3522 1.33921 89.5062 1.39243 89.6561 1.44975C89.6644 1.44975 89.6685 1.45385 89.6727 1.45794C89.7726 1.4907 89.8683 1.53164 89.964 1.57258C90.0806 1.61762 90.1971 1.66266 90.3137 1.71589C90.4593 1.7773 90.605 1.84281 90.7507 1.91241L90.7757 1.9247C90.7757 1.9247 90.7965 1.93698 90.8048 1.94107C92.5903 2.83364 93.9264 4.238 95.0002 5.9699Z"
+                                fill="white" />
+                            <path
+                                d="M95.0002 19.1782C93.0565 22.3636 90.2429 24.202 86.6552 24.9676C85.9393 25.1191 85.1985 25.1887 84.3827 25.2993C79.9084 25.5204 76.0419 24.3739 72.9869 21.1108C71.7882 19.8292 70.8725 18.3757 70.3772 16.693C70.3065 16.4514 70.3148 16.0624 70.4605 15.9069C71.6883 14.6049 72.9577 13.3397 74.3812 11.8944C74.4727 16.3859 76.354 19.4525 80.5785 20.6112C84.9279 21.8027 88.5615 20.4843 91.3376 16.8076C92.5612 17.6019 93.7516 18.3757 95.0002 19.1823V19.1782Z"
+                                fill="#3399FF" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_83_2643">
+                                <rect width="95" height="25" fill="white" transform="translate(0 0.377075)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <h1>MUMBAI CODING CLUB</h1>
+                </div>
+                <div class="button">
+                    <a href="#">EXPLORE OUR PROGRAMS</a>
+                </div>
+            </div>
+            <img src="Rectangle 3777.png" style="margin-left: 50px;">
+
+        </div>
+    </section>
+    <div class="offer">
+        <h1>What Mumbai Coding Club has to offer</h1>
+
+        <div class="club">
+            <div class="box">
+                <img src="Structured-industry.svg">
+                <p>structured,industry-vetted curriculum</p>
+            </div>
+            <div class="box">
+                <img src="Group 18872.svg">
+                <p>Practical Experience through Real-life Projects</p>
+            </div>
+            <div class="box">
+                <img src="Live-classes.svg">
+                <p>Class_Room Training</p>
+            </div>
+            <div class="box">
+                <img src="Group 18938.svg">
+                <p>Mock Interviews by Experts</p>
+            </div>
+            <div class="box">
+                <img src="Clip path group.svg">
+                <p>Placement Support</p>
+            </div>
+            <div class="box">
+                <img src="Group 18862.svg">
+                <p>Certification of Completion</p>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="181px" height="350px" viewBox="0 0 181 520" fill="none">
+            <path
+                d="M93.6238 1.50726L5.41016 138.769L174.574 144.54L6.5149 335.96L174.647 341.08L6.20726 516.199L180.002 517.354"
+                stroke="#194AAC" stroke-width="5" />
+        </svg>
+    </div>
+
+    <!--blue-->
+    <div class="blue">
+        <p>If you have courage and commitment to learn coding, then mumbai coding club will empower you. </p>
+        <h5>No Matter What It Takes!</h5>
+        <div class="image">
+            <div class="img">
+                <div class="imgs">
+                    <img src="boxicon1-9659 1.svg">
+                    <h4>Content designed by IT Professional</h4>
+                </div>
+                <div class="frame">
+                    <img src="Frame 425.svg">
+                </div>
+            </div>
+            <div class="img">
+                <div class="imgs">
+                    <img src="boxicon1-9659 1.svg">
+                    <h4>Instant 1:1 doubt resolution</h4>
+                </div>
+                <div class="frame">
+                    <img src="Frame 425.svg">
+                </div>
+            </div>
+            <div class="img">
+                <div class="imgs">
+                    <img src="boxicon1-9659 1.svg">
+                    <h4>Practical learning with 50+</h4>
+                </div>
+                <div class="frame">
+                    <img src="Frame 425.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--courses-->
+
+    <!-- <div class="course"> -->
+
+    <!-- <h3>basic python</h3>
+            <h4>cooding bootcamp</h4>
+            <ul>
+                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium quidem repellendus adipisci
+                    neque molestiae eius repellat, assumenda officia cupiditate molestias eos fugiat porro quaerat
+                    earum.</li>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure distinctio tenetur commodi, nostrum
+                    illo officia! Iure, nulla consequatur harum consequuntur debitis reprehenderit enim voluptas quos!
+                </li>
+            </ul>
+        </div>
+        <div class="blues">
+            <div>
+                <button>Full Stack Python Developer</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="student" class="tabcontent">
+        <div class="white">
+            <h2>information about basic python</h2>
+            <h3>basic python</h3>
+            <h4>cooding bootcamp</h4>
+            <ul>
+                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium quidem repellendus adipisci
+                    neque molestiae eius repellat, assumenda officia cupiditate molestias eos fugiat porro quaerat
+                    earum.</li>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure distinctio tenetur commodi, nostrum
+                    illo officia! Iure, nulla consequatur harum consequuntur debitis reprehenderit enim voluptas quos!
+                </li>
+            </ul>
+        </div>
+        <div class="blues">
+            <div>
+                <button>Full Stack Python Developer</button>
+                <button style="margin-top: 190px;">tarannum</button>
+            </div>
+        </div>
+    </div>
+    </div> -->
+    <div class="nav2">
+        <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="96" height="25" viewBox="0 0 96 25" fill="balck">
+                <g clip-path="url(#clip0_83_2643)">
+                    <path
+                        d="M34.93 10.1335C33.7647 11.153 32.7408 12.3239 31.6503 13.4335L31.3382 13.7447V13.3393C31.3382 12.066 31.3673 10.7967 31.3257 9.5275C31.3049 8.89698 31.2216 8.25417 31.0385 7.65639C30.3601 5.37994 27.792 4.28266 25.1658 5.17932C22.631 6.04323 21.2326 7.90205 20.8496 10.4446C20.6041 12.111 20.5125 13.8143 20.4834 15.5011C20.4293 18.6415 20.4667 21.7859 20.4667 24.9836H15.93V17.9536C15.8967 15.1408 15.8759 12.4181 15.8177 9.69537C15.801 9.0976 15.7095 8.48754 15.5513 7.91024C14.877 5.40451 12.2965 4.21715 9.60781 5.19979C6.58612 6.30526 5.28755 8.67998 5.16685 11.6525C4.99204 15.7918 5.02117 19.9353 4.96707 24.0788C4.96707 24.3736 4.96707 24.6683 4.96707 25H0.447021V1.10137H4.94209V3.40648C7.20211 1.24467 9.741 0.294782 12.6586 0.524065C15.6012 0.757442 17.8821 2.09219 19.293 4.78627C19.8299 4.20896 20.2919 3.65623 20.8122 3.16491C24.0711 0.0900657 29.0823 -0.413537 32.4536 1.99803C34.4056 3.39419 35.3005 5.37994 35.7874 7.64002C36.0205 8.71273 35.75 9.41286 34.9259 10.1335H34.93Z"
+                        fill="black" />
+                    <path
+                        d="M41.8807 5.99411C43.9077 3.9019 45.9887 1.97347 48.8522 1.19555C54.1631 -0.249749 59.0494 0.376684 63.2198 4.20898C63.6194 4.57747 63.9399 5.03194 64.2645 5.47413C64.5475 5.86309 64.7848 6.28481 65.0844 6.75565C63.8608 7.50492 62.6788 8.22961 61.4509 8.98297C61.247 8.73731 61.068 8.54078 60.9099 8.32788C57.73 4.01655 50.6336 3.69719 47.1874 7.09958C43.608 10.6371 39.9745 14.1214 36.3909 17.6548C36.1745 17.8677 36.1037 18.3017 36.0996 18.6333C36.0746 20.7173 36.0871 22.8054 36.0871 24.9632H31.413C31.413 22.875 31.5421 20.7542 31.3756 18.6579C31.2299 16.8359 31.8168 15.5708 33.1778 14.3384C36.1412 11.6607 38.9506 8.8151 41.8724 5.99411H41.8807Z"
+                        fill="balck" />
+                    <path
+                        d="M95.447 5.59285L94.7228 6.18653L94.6853 6.21929L93.266 7.38208L92.3337 8.15181C92.109 7.95938 91.8925 7.81198 91.7177 7.62364C88.9707 4.6921 85.6119 3.61939 81.6413 4.41369C79.8849 4.7658 78.5197 5.7771 77.2919 6.98493C72.6137 11.5706 67.873 16.103 63.3031 20.791C58.7497 25.4545 51.3953 25.8516 46.7961 23.6652C45.9512 23.264 45.1854 22.7072 44.4154 22.1258L44.2656 22.0152C44.1574 21.9333 44.0492 21.8474 43.9368 21.7655C43.9243 21.7532 43.9076 21.7409 43.891 21.7286C43.7328 21.6058 43.583 21.4789 43.4415 21.3519C43.1959 21.1431 42.9753 20.9343 42.7797 20.7419C42.3718 20.3406 42.0722 20.0049 41.939 19.8452C41.889 19.7879 41.8599 19.7552 41.8599 19.7552C41.0441 18.7234 40.4531 17.5565 40.0619 16.2791C39.9869 16.0293 40.0827 15.6117 40.2575 15.4233C41.4478 14.1623 42.6798 12.9381 44.0242 11.5829C44.1324 12.5532 44.1407 13.323 44.3114 14.0558C45.2728 18.1543 48.7107 20.6313 53.1767 20.6191C55.6198 20.6109 57.6468 19.7715 59.3699 18.0929C64.1521 13.4294 68.976 8.80281 73.7333 4.11889C75.6603 2.22322 77.8621 0.88437 80.5633 0.249748L80.5883 0.24156C80.5883 0.24156 80.634 0.229277 80.659 0.225182C80.6882 0.216994 80.7173 0.212899 80.7381 0.208805H80.7423C80.992 0.171956 81.5955 0.0859751 82.4362 0.0368431H82.4487C83.148 -0.00819455 84.0178 -0.0204776 84.9834 0.0368431C86.0614 0.0982581 87.2643 0.257937 88.4963 0.573201C88.875 0.66737 89.2621 0.777917 89.645 0.913031C89.799 0.962163 89.953 1.01539 90.1028 1.07271C90.1112 1.07271 90.1153 1.0768 90.1195 1.0809C90.2194 1.11365 90.3151 1.1546 90.4108 1.19554C90.5274 1.24058 90.6439 1.28561 90.7604 1.33884C90.9061 1.40026 91.0518 1.46577 91.1975 1.53537L91.2224 1.54765C91.2224 1.54765 91.2432 1.55994 91.2516 1.56403C93.0371 2.45659 94.3732 3.86095 95.447 5.59285Z"
+                        fill="black" />
+                    <path
+                        d="M95.447 18.8012C93.5033 21.9866 90.6897 23.8249 87.102 24.5906C86.3861 24.7421 85.6453 24.8117 84.8295 24.9222C80.3552 25.1433 76.4886 23.9969 73.4336 20.7337C72.235 19.4522 71.3193 17.9987 70.824 16.3159C70.7533 16.0744 70.7616 15.6854 70.9072 15.5298C72.1351 14.2278 73.4045 12.9627 74.828 11.5174C74.9195 16.0088 76.8008 19.0755 81.0253 20.2342C85.3747 21.4257 89.0082 20.1073 91.7844 16.4306C93.008 17.2249 94.1984 17.9987 95.447 18.8053V18.8012Z"
+                        fill="#3399FF" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_83_2643">
+                        <rect width="95" height="25" fill="black" transform="translate(0.447021)" />
+                    </clipPath>
+                </defs>
+            </svg>
+            <h1>MUMBAI CODING CLUB</h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">CURRICULUM</a></li>
+                <li><a href="#">COURSES</a></li>
+                <li><a href="#">REVIEW</a></li>
+                <li><a href="#">fAQ</a></li>
+            </ul>
+        </div>
+        <div class="button">
+            <a href="#">CONTACT US </a>
+        </div>
+        </header>
+    </div>
+
+
+
+    <!--course-->
+    <div class="course">
+        <h1>Our Popular Courses</h1>
+        <div class="radio">
+            <input type="radio" class="tablinks" onclick="opencity(event,'graduate')">
+            <label>Graduate</label>
+            <input type="radio" class="tablinks" onclick="opencity(event,'student')">
+            <label>Student</label>
+        </div>
+    </div>
+    <div id="graduate" class="tabcontent">
+        <div class="blue">
+            <button>
+                full stack developer
+            </button>
+        </div>
+        <div class="white" id="stick">
+            <h1 style="font-weight: 600; margin-bottom: 10px;"> Full Stack Python Developer</h1>
+            <h3>Duration : 6 Months</h3>
+            <UL>
+                <li>The Full Stack python Developer Program is an intense Bootcamp offering a Complete Suit of Software
+                    Development skills.</li>
+                <li>Establish Strong fundamentals with front-end technology like Angular, Javascript, HTML/
+                    CSS,Bootstrap,jQuery</li>
+                <li>Learn Core Python and it is frameworks and get trained by industry Expert </li>
+                <li>Become expert in RDBMS tools which are widely spread Across Industries</li>
+                <li>Work on Live-Mega projects</li>
+                <li>Resume Writing & Mock Interviews</li>
+                <li>Certifications & Placement Support</li>
+            </UL>
+            <div class="logos">
+                <div class="clock">
+                    <img src="Iconsax/Bold/clock.svg">
+                    <p>50 + Hours</p>
+                </div>
+                <div class="book">
+                    <img src="mdi_palette-swatch-19337.svg.svg">
+                    <p>100 + problems</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div id="student" class="tabcontent">
+        <div class="blue">
+            <button class="courselink" id="btn1" onclick="page(event,'expert')">
+                Become Python Expert
+            </button>
+            <button class="courselink" id="btn2" onclick="page(event,'dsa')" style="margin-top: 170px; ">
+                Master Advance Python And DSA
+            </button>
+        </div>
+        <div class="white" id="expert">
+            <h1 style="font-weight: 600; margin-bottom: 10px;">Information About Basic Python</h1>
+            <h2 style="font-weight: 600; margin-bottom: 10px;">Basic Python</h2>
+            <h3 style="font-weight: 600; margin-bottom: 10px;">Coding Bootcamp</h3>
+            <ul>
+                <li>The Full Stack python Developer Program is an intense Bootcamp offering a Complete Suit of
+                    Software
+                    Development skills.</li>
+                <li>Establish Strong fundamentals with front-end technology like Angular, Javascript, HTML/
+                    CSS,Bootstrap,jQuery</li>
+            </ul>
+            <div class="logos">
+                <div class="clock">
+                    <img src="Iconsax/Bold/clock.svg">
+                    <p>50 + Hours</p>
+                </div>
+                <div class="book">
+                    <img src="mdi_palette-swatch-19337.svg.svg">
+                    <p>100 + problems</p>
+                </div>
+            </div>
+        </div>
+        <div class="white" id="dsa">
+            <h1 style="font-weight: 600; margin-bottom: 10px;">Information About Advance Python</h1>
+            <h2 style="font-weight: 600; margin-bottom: 10px;">Advance Python</h2>
+            <h3 style="font-weight: 600; margin-bottom: 10px;">Duration : 3 Months</h3>
+            <ul>
+                <li>Master Advance Python and become proficient</li>
+                <li>Learn Data Structure & Algorithm</li>
+                <li>Get hands-on live projects</li>
+                <li>Get well versed with RDBMS tools</li>
+                <li>Certification of completion</li>
+                <li>Internship Opportunities</li>
+            </ul>
+            <div class="logos">
+                <div class="clock">
+                    <img src="Iconsax/Bold/clock.svg">
+                    <p>50 + Hours</p>
+                </div>
+                <div class="book">
+                    <img src="mdi_palette-swatch-19337.svg.svg">
+                    <p>100 + problems</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!--tools-->
+    <div class="tools">
+        <h1>Programming Languages & Tool Covered</h1>
+        <div class="tool_box">
+            <div class="img">
+                <img src="g2303 (1).svg" width="220px">
+            </div>
+            <div class="img">
+                <img src="XMLID_1_.svg" width="70px">
+            </div>
+            <div class="img">
+                <img src="Group.svg" width="80px">
+            </div>
+            <div class="img">
+                <img src="Group 18765.svg" width="120px">
+            </div>
+            <div class="img">
+                <img src="XMLID_1_ (1).svg">
+            </div>
+            <div class="img">
+                <img src="XMLID_1_ (2).svg" width="70px">
+            </div>
+            <div class="img">
+                <img src="XMLID_1_ (3).svg" width="80px">
+            </div>
+            <div class="img">
+                <img src="XMLID_1_ (4).svg">
+            </div>
+        </div>
+    </div>
+
+    <!--job-->
+    <div class="job">
+        <h1>Job Roles You Can Apply For</h1>
+        <div class="jobs">
+            <div class="job_box">
+                <P>Full-Stack Web Developer</P>
+            </div>
+            <div class="job_box">
+                <P>Software Developer</P>
+            </div>
+            <div class="job_box">
+                <P>Front-End Developer</P>
+            </div>
+            <div class="job_box">
+                <P>Back-End Developer</P>
+            </div>
+            <div class="job_box">
+                <P>Full-Stack Python Developer</P>
+            </div>
+            <div class="job_box">
+                <P>SDE-I</P>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--testimonial-->
+
+    <div class="review">
+        <div class="box">
+            <div class="img">
+                <img src="person.jpg">
+                <p>Ashraf Malik</p>
+            </div>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <h6>Python developer</h6>
+            <h4>6.0 LPA</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae obcaecati quos doloremque, voluptates culpa nihil iusto quidem quam rerum sapiente unde quas aspernatur! Fuga sint consectetur nulla nobis, pariatur culpa optio laborum quis perspiciatis nisi.</p>
+        </div>
+        <div class="box">
+            <div class="img">
+                <img src="person.jpg">
+                <p>Ashraf Malik</p>
+            </div>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <h6>Python developer</h6>
+            <h4>6.0 LPA</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae obcaecati quos doloremque, voluptates culpa nihil iusto quidem quam rerum sapiente unde quas aspernatur! Fuga sint consectetur nulla nobis, pariatur culpa optio laborum quis perspiciatis nisi.</p>
+        </div> <div class="box">
+            <div class="img">
+                <img src="person.jpg">
+                <p>Ashraf Malik</p>
+            </div>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <h6>Python developer</h6>
+            <h4>6.0 LPA</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae obcaecati quos doloremque, voluptates culpa nihil iusto quidem quam rerum sapiente unde quas aspernatur! Fuga sint consectetur nulla nobis, pariatur culpa optio laborum quis perspiciatis nisi.</p>
+        </div> <div class="box">
+            <div class="img">
+                <img src="person.jpg">
+                <p>Ashraf Malik</p>
+            </div>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <h6>Python developer</h6>
+            <h4>6.0 LPA</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae obcaecati quos doloremque, voluptates culpa nihil iusto quidem quam rerum sapiente unde quas aspernatur! Fuga sint consectetur nulla nobis, pariatur culpa optio laborum quis perspiciatis nisi.</p>
+        </div> <div class="box">
+            <div class="img">
+                <img src="person.jpg">
+                <p>Ashraf Malik</p>
+            </div>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <h6>Python developer</h6>
+            <h4>6.0 LPA</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae obcaecati quos doloremque, voluptates culpa nihil iusto quidem quam rerum sapiente unde quas aspernatur! Fuga sint consectetur nulla nobis, pariatur culpa optio laborum quis perspiciatis nisi.</p>
+        </div> <div class="box">
+            <div class="img">
+                <img src="person.jpg">
+                <p>Ashraf Malik</p>
+            </div>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <h6>Python developer</h6>
+            <h4>6.0 LPA</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae obcaecati quos doloremque, voluptates culpa nihil iusto quidem quam rerum sapiente unde quas aspernatur! Fuga sint consectetur nulla nobis, pariatur culpa optio laborum quis perspiciatis nisi.</p>
+        </div> <div class="box">
+            <div class="img">
+                <img src="person.jpg">
+                <p>Ashraf Malik</p>
+            </div>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <h6>Python developer</h6>
+            <h4>6.0 LPA</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae obcaecati quos doloremque, voluptates culpa nihil iusto quidem quam rerum sapiente unde quas aspernatur! Fuga sint consectetur nulla nobis, pariatur culpa optio laborum quis perspiciatis nisi.</p>
+        </div> <div class="box">
+            <div class="img">
+                <img src="person.jpg">
+                <p>Ashraf Malik</p>
+            </div>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <h6>Python developer</h6>
+            <h4>6.0 LPA</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae obcaecati quos doloremque, voluptates culpa nihil iusto quidem quam rerum sapiente unde quas aspernatur! Fuga sint consectetur nulla nobis, pariatur culpa optio laborum quis perspiciatis nisi.</p>
+        </div> <div class="box">
+            <div class="img">
+                <img src="person.jpg">
+                <p>Ashraf Malik</p>
+            </div>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <h6>Python developer</h6>
+            <h4>6.0 LPA</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae obcaecati quos doloremque, voluptates culpa nihil iusto quidem quam rerum sapiente unde quas aspernatur! Fuga sint consectetur nulla nobis, pariatur culpa optio laborum quis perspiciatis nisi.</p>
+        </div>
+    </div>
+    <!--faq-->
+    <div class="faq">
+        <h1>[Frequently Asked Questions]</h1>
+        <div class="tab">
+            <input type="radio" onclick="label:after" name="acc" id="acc1">
+            <label for="acc1">
+                <h3>Program</h3>
+            </label>
+            <div class="content">
+                <P>
+                    <b>What is MCC</b>
+                </P>
+                <p>Mumbai Coding Club offers a structured, flexible and guided learning program for software
+                    engineers
+                    to accelerate their career. This program is open for all software engineers irrespective of the
+                    # of
+                    years of work experience or their current place of work.</p>
+                <p>
+                    <b>Our features are:</b>
+                </p>
+                <ol>
+                    <li>structured curriculum that covers CS fundamentals via a project based approach. This
+                        curriculum
+                        has been industry-vetted and reverse-engineered by analyzing what it takes to be a great
+                        engineer.</li>
+                    <li>Offline classes that are held twice a week, with the timings deteminated by students in the
+                        batch.</li>
+                    <li>Tutors who have built scalables system in the past and understand the real-life importance of
+                        DSA, not just interview-relevant mterial.</li>
+                    <li>Quick doubt resolution from out Teaching Assistants.</li>
+                    <li>Flexible curriculum that help you continue learing despite your hectic work schedule. We provide
+                        recorded lectures to viiew later and also allow you to move between batches at NO cost. </li>
+                    <li>Career supprt - we provide job opportunities via mock interview services and career planning
+                        services.</li>
+                </ol>
+                <p>
+                    <b>Who is elligible for MCC</b>
+                </p>
+                <p>Sotware engineers with any number of years of experience can choose to join Mumbai Coding
+                    Club.Applicants currently in college(1st, 2nd, 3rd or final year of college) could consider to join
+                    Mumbai Coding Club, our college students focused product. please visit<a
+                        href="">www.mumbaicodingclub.com</a> for more details. </p>
+                <p>
+                    <b>When are the classes held?</b>
+                </p>
+                <p>Live classes are normally held 2 times a week, with the exact class days and timings being determined
+                    by the batch. However, given all learners would be software engineers that are currently working,
+                    the classes would be held in the late evening or night on weekdays and any suitable time over the
+                    weekends. </p>
+                <p>
+                    <b>Are full-stack developer in demand in 2023?</b>
+                </p>
+                <p> is one of the high-demand jobs in the industry. Companies pay them handsomely since they contribute
+                    the most to software projects. Thus, whether you are a fresher or an experienced developer, you will
+                    always be in demand in the software indstry,with great opportunities waiting for you.</p>
+                <p>
+                    <b>Will I get full-stack developers certification?</b>
+                </p>
+                <p>After the end of course,you will receive a course completion certificate.</p>
+                <p>
+                    <b>Can I enroll only into full-stack of the MCC?</b>
+                </p>
+                <p>No, we feel that before jumping into a full-stack module , you must learn the basics of programming,
+                    cs fundamentals, and Data Strauctures & Algorithms. These skills are essential to have before you
+                    can begin with a full-stack specialization.</p>
+            </div>
+        </div>
+        <div class="tab">
+            <input type="radio" onclick="label:after" name="acc" id="acc2">
+            <label for="acc2">
+                <h3>curriculum</h3>
+            </label>
+            <div class="content">
+                <p><b>Do all section start at the same time? </b></p>
+                <p>Yes, all sections start at the same time but end at different times, depending on the duration of the
+                    course for that section. The Advanced section ends in 9 months, the intermediate section ends in 11
+                    months and the Beginner section ends in 13 months.</p>
+                <p><b>Should I join the Beginner, Intermediate or Advanced sections?</b></p>
+                <p>Your eligibility for the Beginner, Intermediate or Advanced section is decidedd basis an entrance
+                    test.</p>
+                <p><b>Whaat is the duration of this program?</b></p>
+                <p>Your eligibility for the Beginner, Intermediaate or Advanced section is decided basis an entrance
+                    test.</p>
+            </div>
+        </div>
+        <div class="tab">
+            <input type="radio" onclick="label:after" name="acc" id="acc3">
+            <label for="acc3">
+                <h3>Teaching</h3>
+            </label>
+            <div class="content">
+                <p><b>Teaching</b></p>
+                <p>What is the role of the tutor?</p>
+                <p>Our tutors would teach you the concepts mentioned in the course curriclum and would take live classes
+                    3 times a week. There would be different tutors teaching different topics. </p>
+                <p><b>What are the profiles of the tutors?</b></p>
+                <p>Our tutors have built</p>
+            </div>
+        </div>
+        <div class="tab">
+            <input type="radio" onclick="label:after" name="acc" id="acc4">
+            <label for="acc4">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+            </label>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum distinctio, odio eum incidunt
+                    recusandae itaque laborum quis cupiditate nulla est corporis. Enim doloribus alias ullam?</p>
+            </div>
+        </div>
+        <div class="tab">
+            <input type="radio" onclick="label:after" name="acc" id="acc5">
+            <label for="acc5">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+            </label>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum distinctio, odio eum incidunt
+                    recusandae itaque laborum quis cupiditate nulla est corporis. Enim doloribus alias ullam?</p>
+            </div>
+        </div>
+        <div class="tab">
+            <input type="radio" onclick="label:after" name="acc" id="acc6">
+            <label for="acc6">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+            </label>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum distinctio, odio eum incidunt
+                    recusandae itaque laborum quis cupiditate nulla est corporis. Enim doloribus alias ullam?</p>
+            </div>
+        </div>
+        <div class="tab">
+            <input type="radio" onclick="label:after" name="acc" id="acc7">
+            <label for="acc7">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+            </label>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum distinctio, odio eum incidunt
+                    recusandae itaque laborum quis cupiditate nulla est corporis. Enim doloribus alias ullam?</p>
+            </div>
+        </div>
+    </div>
+
+    <!--contact-->
+    <div class="contact">
+        <div class="footer">
+            <p>Copyright © MCC 2021 - 2023 | Terms | Placement | Privacy</p>
+        </div>
+        <div class="box2" width="500px">
+            <h2>Send us message</h2>
+            <form>
+                <label>Full Name</label>
+                <input type="text">
+                <label>Email Address</label>
+                <input type="text">
+                <label>phone No.</label>
+                <input type="number">
+                <h5>Message</h5>
+                <textarea></textarea>
+                <button>Send Now</button>
+            </form>
+        </div>
+
+
+
+
+        <div class="box1" width="1440px">
+            <h4>Courses</h4>
+            <ul>
+                <li><i class="fa-solid fa-chevron-right"></i><a href="">Full stack Developer</a></li>
+                <li><i class="fa-solid fa-chevron-right"></i><a href="">Become Python Expert</a></li>
+                <li><i class="fa-solid fa-chevron-right"></i><a href="">Master Advance Python & DSA</a></li>
+            </ul>
+            <h4>Contact</h4>
+            <ul>
+                <li><i class="fa-solid fa-phone"></i><a href="tel:91-9702328507">91-9702328507</a></li>
+                <li><i class="fa-solid fa-envelope"></i><a
+                        href="mailto:Mumbaicodingclub@gmail.com">Mumbaicodingclub@gmail.com</a></li>
+                <li><i class="fa-solid fa-location-dot"></i><a href=""></a>Gala No B/1,New Modern housing
+                    society,90feet
+                    road, lokmanya tilak nagar, sakinaka,
+                    mumbai, maharashtra 400072</li>
+            </ul>
+            <div class="logos">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['raining', 'raining', 'raining'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
